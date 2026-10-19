@@ -35,7 +35,7 @@ body {
   font-family:var(--secondaryFontFamily);
   font-size: 14px;
   background-color: var(--primaryBackgroundColor);
-  background-image: url("Images/books2.jpg");
+  /* background-image: url("Images/books2.jpg"); */
   background-size: cover;
   color: var(--primaryTextColor);
   cursor:default;
@@ -55,6 +55,15 @@ header {
   height: 106px;
   z-index: 10;
   background-color: black;
+}
+
+.backgroundImageMain {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/Images/books1.jpg");
+  z-index: -1;
+   filter: brightness(40%);
 }
 
 .booksIcon {
@@ -111,7 +120,10 @@ header {
 /* light mode class */
 
 .lightMode {
-  background-image: url("/Images/books1.jpg");
+  /* background-image: url("/Images/books1.jpg"); */
+  .backgroundImageMain {
+    filter: brightness(100%)
+  }
   --primaryBorder : 2px solid darkblue;
   --bookListTextColor : black;
   --windowBackgroundColor :white;
@@ -894,6 +906,7 @@ footer {
   border-radius: 4px;
   padding : 0 20px;
   background-color: black;
+  z-index: 100;
 
 }
 
